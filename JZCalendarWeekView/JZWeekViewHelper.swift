@@ -22,6 +22,7 @@ public enum JZDecorationViewKinds {
     public static let allDayCorner = JZAllDayCorner.className
     public static let verticalGridline = "VerticalGridline"
     public static let horizontalGridline = "HorizontalGridline"
+    public static let weekendBackground = "WeekendBackground"
 }
 
 enum ScrollDirection {

@@ -14,6 +14,11 @@ extension NSObject {
     }
 }
 
+extension Calendar {
+    static let gregorian = Calendar(identifier: .gregorian)
+    static let iso8601 = Calendar(identifier: .iso8601)
+}
+
 extension UICollectionView {
     
     func setContentOffsetWithoutDelegate(_ contentOffset: CGPoint, animated: Bool) {
@@ -176,6 +181,10 @@ extension Date {
     
     var startOfDay: Date {
         return Calendar.current.startOfDay(for: self)
+    }
+    
+    var startOfWeek: Date? {
+        return Calendar.current.date(from: Calendar.current.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self))
     }
     
     var endOfDay: Date {
